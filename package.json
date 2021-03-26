@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock": "json-server ./src/server/db.js"
+    "mock": "json-server ./server/db.js"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "@ngx-formly/core": "^5.0.0",
     "@ngx-formly/ionic": "^5.0.0",
     "@ngx-formly/schematics": "^5.10.15",
+    "axios": "^0.21.1",
     "faker": "^5.5.0",
     "fuse.js": "^6.4.6",
     "rxjs": "~6.6.0",
