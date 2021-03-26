@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "mock": "json-server ./src/server/db.js"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,11 @@
     "@angular/router": "~11.2.0",
     "@capacitor/core": "2.4.7",
     "@ionic/angular": "^5.5.2",
+    "@ngx-formly/core": "^5.0.0",
+    "@ngx-formly/ionic": "^5.0.0",
+    "@ngx-formly/schematics": "^5.10.15",
+    "faker": "^5.5.0",
+    "fuse.js": "^6.4.6",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

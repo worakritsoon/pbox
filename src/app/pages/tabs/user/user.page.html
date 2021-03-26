@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let user of users ">
+    <ion-card-header >
+      <ion-card-title>{{user.user}}</ion-card-title>
+      <ion-avatar>
+        <img [src]="user.imageurl" />
+      </ion-avatar>
+    </ion-card-header>
+    <ion-card-content>
+      Awesome content
+    </ion-card-content>
+  </ion-card>
+</ion-content>

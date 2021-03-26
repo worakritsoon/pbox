@@ -1,0 +1,19 @@
+<ion-searchbar placeholder="Search" inputmode="search" type="search" (ionChange)="onSearchChange($event)"
+  [debounce]="250" showCancelButton="focus"></ion-searchbar>
+
+
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-avatar slot="end">
+      
+      </ion-avatar>
+      <ion-label>
+        <h3>{{item.name}}</h3>
+        <p>{{item.url}}</p>
+        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  </ion-content>

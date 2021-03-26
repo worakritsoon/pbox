@@ -1,0 +1,18 @@
+{
+  "title":"Angular Form",
+  "type":"object",
+  "properties":{
+    "firstname":{
+      "type":"input",
+      "title":"ชื่อ"
+    },
+    "lastname":{
+      "type":"input",
+      "title":"สกุล"
+    },
+    "Dep":{
+      "type":"input",
+      "title":"หน่วยงาน"
+    }
+  }
+}
