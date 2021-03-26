@@ -1,0 +1,7 @@
+{
+  "name": "pbox",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
