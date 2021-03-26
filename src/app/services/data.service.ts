@@ -10,8 +10,13 @@ export class DataService {
 
   }
 
-  async getAllTask(){
+  async getAllTask<tasks>(){
     const res = await axios.get(`${this.jsonUrl}/tasks`)
+    return res['data']
+  }
+
+  async getAllProduct<products>(){
+    const res = await axios.get(`${this.jsonUrl}/products`)
     return res['data']
   }
 }

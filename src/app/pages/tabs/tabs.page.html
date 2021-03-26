@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="secondary">
       <ion-buttons slot="start">
@@ -12,9 +12,7 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-toolbar>
-    <ion-searchbar placeholder="Search" inputmode="search" type="search"[debounce]="250" showCancelButton="focus"></ion-searchbar>
-  </ion-toolbar>
+  <ion-searchbar [(ngModel)]="searchTerm"   (ionChange)="onChange($event)"  placeholder="Search" inputmode="decimal" type="decimal"  [debounce]="250" ></ion-searchbar>
 </ion-header>
 
 <ion-content>

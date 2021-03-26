@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import Fuse from 'fuse.js';
+import { DataService } from 'src/app/services/data.service';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,44 +9,24 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./search.page.scss'],
 })
 export class SearchPage implements OnInit {
-
   itemslist = [];
 
   items = [];
 
-  searchTerm = "";
+  @Input() pattern;
 
-  constructor(private userService: UserService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.getData();
   }
 
-
-  
   getData() {
-    this.userService.getPokemon().subscribe((data) => {
-      return this.items = [...data];
+    this.dataService.getAllProduct().then((data) => {
+      this.items = data.products;
     });
   }
-
- async onSearchChange(ev) {
-    this.searchTerm = ev.detail.value;
-    // Load and deserialize index
-    
-    ///
-    const options=
-      {
-        includeScore: true,
-        useExtendedSearch: true,
-        keys: ['name']
-      }
-
-      
-    
-    const fuse = new Fuse(this.itemslist, options)
-    const result = fuse.search(this.searchTerm)
-      
-    return  
+  onChange(event) {
+    console.log(event.target.value);
   }
 }

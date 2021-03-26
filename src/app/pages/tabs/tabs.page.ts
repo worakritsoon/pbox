@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-tabs',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabsPage implements OnInit {
 
-  constructor() { }
+
+  searchTerm
+  constructor() {
+   }
 
   ngOnInit() {
+  }
+
+  onChange(event){
+      //console.log(event)
+    console.log(this.searchTerm)
   }
 
 }

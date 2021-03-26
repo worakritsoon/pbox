@@ -1,16 +1,14 @@
 
-
-<ion-content>
+<ion-content >
   <ion-list>
     <ion-item *ngFor="let item of items">
       <ion-avatar slot="end">
-      
       </ion-avatar>
       <ion-label>
-        <h3>{{item.name}}</h3>
-        <p>{{item.url}}</p>
-        <p>consectetur adipiscing elit. Duis ut urna neque.</p>
+        <h3>{{item.id}}</h3>
+        <p>{{item.productName}}</p>
+        <p>{{item.price}}</p>
       </ion-label>
     </ion-item>
   </ion-list>
-  </ion-content>
+</ion-content>
